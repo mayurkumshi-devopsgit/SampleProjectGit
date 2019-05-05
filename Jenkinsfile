@@ -24,7 +24,7 @@ pipeline {
             }                     
             steps {
  //            sshagent (credentials: ['test-git-tag'])                        
-                {
+               // {
                 script {
                    
                         def tag = sh(returnStdout: true, script: "git tag | tail -1").trim()
@@ -41,7 +41,7 @@ pipeline {
                         """
                     
                 }
-              }
+             // }
                 
             }
         }
